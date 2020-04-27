@@ -1,0 +1,46 @@
+@charset "UTF-8"; 
+
+/* CSS Document */
+
+@page {
+    size: Letter;
+    margin: 25mm 25 25mm 25mm;
+    counter-increment: page;
+    font-family: Muli, Helvetica, Arial, "Roboto", "Material Icons", sans-serif;
+  @top-right {
+    background: url(megaport-logo-sm.png) no-repeat center;
+    background-size: 3cm;
+    content: "";
+    width: 3cm;
+  }
+  @bottom-left {
+    background: #d3d3d3;
+    content: '';
+    display: block;
+    height: .025cm;
+    opacity: .5;
+    width: 100%; }
+  @bottom-center {
+    font-family: Arial; 
+    font-size: 9pt;
+    content: counter(page);
+    height: .75cm;
+    text-align: center;
+    width: .75cm; }
+  @bottom-right {
+    content: none; }
+}
+
+
+/* Fixes list/paragraph alignment issues 
+
+html ol li p:not(admonition-title) {
+  display: inline; 
+  }
+
+*/
+
+html ol li p:not(div.admonition) {
+  display: inline; 
+  }
+

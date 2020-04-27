@@ -1,0 +1,67 @@
+# Project information
+site_name: J. Eric Akin - Resume
+site_description: J. Eric Akin - Resume
+site_author: Eric Akin
+
+repo_name: GitHub
+repo_url: https://github.com/jericakin/doc
+edit_uri: ""
+
+# Copyright
+copyright: "&copy; 2020"
+
+# Configuration
+theme:
+  name: material
+  logo: img/name_header.gif
+  palette:
+    primary: grey
+    accent: grey
+  custom_dir: theme
+  font:
+    text: Muli
+    code: Roboto Mono
+
+extra_css:
+  - css/extra.css
+  - css/pdf.css
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - smarty
+  - toc:
+      permalink: false
+
+#Plug-ins
+plugins:
+    - search
+    - git-revision-date-localized:
+        type: timeago
+    - markdownextradata: {}
+    - pdf-export:
+        verbose: false
+        media_type: print
+        combined: false
+        combined_output_path: megaport-guide.pdf
+        enabled_if_env: ENABLE_PDF_EXPORT
+#at CLI type ENABLE_PDF_EXPORT=1 mkdocs build to generate
+
+#Analytics
+google_analytics:
+  - UA-109987857-2
+  - auto
+
+# Navigation
+nav:
+  - Welcome: index.md
+  - Experience: experience.md
+  - Education: education.md
+  - Applications: applications.md
+  - References: refs.md
+  - Contact: contact.md
+
+
